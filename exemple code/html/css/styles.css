@@ -1,0 +1,244 @@
+﻿body{
+  margin : 0px;
+  /*cursor: url("../image/cursor.png"), pointer; *//*43px*43px*/
+}
+
+h1{
+ front-size:25em;
+}
+
+.couleur
+{ 	
+	font-size:25px;
+	color:white;
+	text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+/********************************* CSS Onglets Menu *******************************************/
+
+/* position of menu */
+
+.menu {
+  padding: 10px 10px 60px 10px;
+  margin-bottom: 20px;
+  border-bottom : 1px solid #9EA0A1;
+}
+/* formes des onglets*/
+#onglets li
+{
+  font : bold 40px Batang, arial, serif;
+  list-style-type : none;
+  float : left;
+  height : 54px; 
+  background-color: #F4F9FD;
+  margin : 2px 2px 0 2px !important;
+  border : 1px solid #9EA0A1;
+}
+/* Onglet actif*/
+#onglets b
+{
+  display : block;
+  background : #666;
+  color : #FFFFFF;
+  text-decoration : none;
+  padding: 4px;
+  cursor : pointer;
+
+}
+
+/* Onglet passif */
+#onglets a
+{
+  display : block;
+  color : #666;
+  text-decoration : none;
+  padding: 4px;
+}
+
+/* change color on mouse hover menu */
+#onglets a:hover
+{
+  padding-top: 2px;
+  padding-bottom: 7px;
+  background : #d9d9d9;
+}
+
+/******************************************************************************************/
+
+
+/* css button switch */
+.onoffswitch {
+  position: relative; width: 87px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 2px solid #FFE8E8; border-radius: 20px;
+}
+.onoffswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+  font-size: 15px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 17px;
+  background-color: #45C23C; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 17px;
+  background-color: #F53D3D; color: #FFFFFF;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block; width: 18px; margin: 6px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: 53px;
+  border: 2px solid #FFE8E8; border-radius: 20px;
+  transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px; 
+}
+
+
+
+
+
+/* css button*/
+
+.myButtonLED {
+	-moz-box-shadow: 3px 4px 0px 0px #a3b4ba;
+	-webkit-box-shadow: 3px 4px 0px 0px #a3b4ba;
+	box-shadow: 3px 4px 0px 0px #a3b4ba;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #b3afb3));
+	background:-moz-linear-gradient(top, #ffffff 5%, #b3afb3 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #b3afb3 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #b3afb3 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #b3afb3 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #b3afb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#b3afb3',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px;
+	border-radius:14px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#364245;
+	font-family:Arial;
+	font-size:20px;
+	padding:12px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.myButtonLED:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b3afb3), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #b3afb3 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #b3afb3 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #b3afb3 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #b3afb3 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #b3afb3 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3afb3', endColorstr='#ffffff',GradientType=0);
+	background-color:#b3afb3;
+}
+.myButtonLED:active {
+	position:relative;
+	top:1px;
+}
+
+input[type=range][orient=vertical]
+{
+  writing-mode: bt-lr; /* IE */
+  -webkit-appearance: slider-vertical; /* WebKit */
+  width: 8px;
+  height: 175px;
+  padding: 0 5px;
+}
+
+
+/* Loader page WOL */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to WOL */
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+
+/* Add Particle to the page */
+
+#particles-js{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/Fond.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* Superpose different pages */
+
+.container{
+  position:relative;
+  z-index:3
+}

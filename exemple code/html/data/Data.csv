@@ -1,0 +1,14 @@
+Cycle Porte;;
+Capteur Exterieur;Desactiver;
+Capteur Interieur;Desactiver;
+Max;600;
+Min;5;
+Delta;15;
+Time;5;
+RGBState;Eteint;
+RGBValue;018000097;Off
+Angle;80;
+AutoOpen;Desactiver;10:00
+AutoClose;Desactiver;02:20
+DIOCmd;WaitData;
+DIOMode;Off;
