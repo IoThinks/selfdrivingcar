@@ -11,8 +11,6 @@ import (
 	"image"
 
 	"sync"
-
-	"github.com/faiface/pixel"
 )
 
 type server struct {
@@ -21,8 +19,8 @@ type server struct {
 
 type img struct {
 	sync.RWMutex
-	sprite *pixel.Sprite
-	count  int
+	frame image.Image
+	count int
 }
 
 var message = []string{"right", "left"}
@@ -34,9 +32,8 @@ func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		defer file.Close()
 		if err == nil {
 			if m, _, err := image.Decode(file); err == nil {
-				picture := pixel.PictureDataFromImage(m)
 				s.image.Lock()
-				s.image.sprite.Set(picture, picture.Bounds())
+				s.image.frame = m
 				s.image.count++
 				s.image.Unlock()
 

@@ -31,8 +31,9 @@ func run() {
 		panic(err)
 	}
 
-	pic := pixel.PictureDataFromImage(image.NewRGBA(image.Rect(0, 0, width, height)))
-	s := &server{image: img{sprite: pixel.NewSprite(pic, pic.Bounds())}}
+	s := &server{
+		image:    img{frame: image.NewRGBA(image.Rect(0, 0, width, height))},
+	}
 
 	go func() {
 		fmt.Println(http.ListenAndServe(":8080", s))
@@ -55,7 +56,9 @@ func run() {
 		}
 
 		s.image.RLock()
-		s.image.sprite.Draw(win, pixel.IM.Moved(win.Bounds().Center()))
+		pic := pixel.PictureDataFromImage(s.image.frame)
+		sprite := pixel.NewSprite(pic, pic.Bounds())
+		sprite.Draw(win, pixel.IM.Moved(win.Bounds().Center()))
 		s.image.RUnlock()
 
 		win.Update()
